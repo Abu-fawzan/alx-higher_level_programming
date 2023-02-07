@@ -1,20 +1,36 @@
 #!/usr/bin/python3
-"""Module 100-my_int.
-Creates a class that inherits from int.
-"""
+
+"""Defines a Rectangle subclass Square."""
+Rectangle = __import__('9-rectangle').Rectangle
 
 
-class MyInt(int):
-    """Class inheriting from int,
-    But reverses the behavior of != and ==.
-    """
+class Square(Rectangle):
+    """Represent a square."""
 
-    def __eq__(self, other):
-        """Equality becomes inequality."""
+    def __init__(self, size):
+        """Initialize a new square.
+        Args:
+            size (int): The size of the new square.
+        """
+        self.integer_validator("size", size)
+        super().__init__(size, size)
+        self.__size = size
 
-        return super().__ne__(other)
 
-    def __ne__(self, other):
-        """Inequality becomes equality."""
 
-        return super().__eq__(other)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
